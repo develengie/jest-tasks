@@ -17,7 +17,7 @@
     font-size: 12px;
     height: 16px;
     color: white;
-    background-color: #343A40;
+    background-color: #343a40;
     border: 1px solid #363b42;
     border-radius: 4px;
     padding: 4px;
@@ -49,9 +49,9 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    
+
     z-index: 1000;
-    background-color: rgba(0,0,0, .2);
+    background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(2px);
 }
 
@@ -65,8 +65,8 @@
     align-items: center;
     margin-top: 100px;
 
-    background-color: #484F59;
-    box-shadow: 0 2px 6px -4px rgba(0,0,0, .6);
+    background-color: #484f59;
+    box-shadow: 0 2px 6px -4px rgba(0, 0, 0, 0.6);
     border-radius: 4px;
 
     z-index: 1001;
@@ -74,15 +74,14 @@
 
 .button {
     height: 16px;
-    
+
     color: white;
-    background-color: #484F59;
+    background-color: #484f59;
     border: 1px solid #363b42;
     border-radius: 4px;
 
     outline: none;
 }
-
 
 .button-with-text {
     padding: 6px 12px;
@@ -107,7 +106,7 @@
     margin: 12px auto;
 
     font-size: 10px;
-    opacity: .3;
+    opacity: 0.3;
 }
 
 .button:active:not(:disabled) {
@@ -136,4 +135,24 @@
     width: 100%;
 
     border-bottom: 1px dotted rgba(255, 255, 255, 0.1);
+}
+
+.filter-button {
+    height: 32px;
+    margin: 0 auto;
+    padding: 6px 12px;
+
+    color: white;
+    cursor: pointer;
+    background-color: #484f59;
+    border: 1px solid #363b42;
+    border-radius: 4px;
+
+    outline: none;
+    transition: background-color 0.1s linear, color 0.1s linear;
+}
+
+.filter-button:hover {
+    background-color: white;
+    color: #484f59;
 }

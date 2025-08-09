@@ -1,21 +1,21 @@
-import { store } from "./store/configureStore";
-
-import "./styles.css";
+import { useSelector } from "react-redux";
+import { tasksSelector } from "./store/taskSlice";
+import { FilterButton } from "./components/FilterButton";
 import { NewTaskBar } from "./modules/NewTaskBar";
 import { TaskList } from "./modules/TaskList";
-import { Provider } from "react-redux";
 import { NotifierContainer } from "./modules/NotifierContainer";
-
+import "./styles.css";
 
 export const App = () => {
-  return (
-    <div className="root-container">
-      <Provider store={store}>
-        <h3>Список задач</h3>
-        <NewTaskBar />
-        <TaskList />
-        <NotifierContainer />
-      </Provider>
-    </div>
-  );
+    const items = useSelector(tasksSelector);
+
+    return (
+        <div className="root-container">
+            <h3>Список задач</h3>
+            {items.length > 0 && <FilterButton />}
+            <NewTaskBar />
+            <TaskList />
+            <NotifierContainer />
+        </div>
+    );
 };
